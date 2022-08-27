@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
+*{
+    box-sizing: border-box;
+    
+}
+
+
+body{
+    font-family: 'Silkscreen', cursive;
+    margin: 0;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+    height:100%;
+    overflow:auto;
+    background-color: whitesmoke;
+}
+ .wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+} 
+
+.container{
+    justify-content: center;
+    display: flex;
+    width: 90vw; /*need to learn abt this further*/
+    height: 90vh;
+}
+
+.panel{
+    background-size:auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 75vh;
+    border-radius: 90px;
+    color:rgb(255, 255, 255);
+    cursor: pointer;
+    flex:0.5;
+    position: relative;
+    margin: 10px;
+    transition: flex 0.7s ease-in;
+
+}
+
+.panel h3 {
+    font-size: 24px;
+    position:absolute;
+    bottom: 32px;
+    left: 25px;
+    opacity: 0;
+
+}
+
+ .panel.active {
+    flex: 5;
+
+} 
+
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.2s ease-in 0.3s;
+} 
+
+#Btn{
+    position: relative;
+}
+#myBtn{
+  position: fixed;
+  right: 10px;
+  right: 15px;
+  z-index: 99;
+  bottom: 10vh;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: rgb(2, 2, 2);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+#myBtn:hover {
+    background-color: #555;
+  }
+
+@media(max-width:500px) {
+    .container {
+        width: 100vw;
+    }
+    .panel:nth-of-type(4),.panel:nth-of-type(5),.panel:nth-of-type(6) {
+        display: none;
+    }
+}
